@@ -4,9 +4,10 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 export const DesktopItems = () => {
   const style = {
+    color: 'black',
     transition: "color 0.3s ease",
     "&:hover": {
-      color: "#707572ff", // green on hover
+      color: "#707572ff", 
     },
   };
   return (
@@ -16,18 +17,18 @@ export const DesktopItems = () => {
       justifyContent="start"
       spacing={6}
     >
-      <Link href="#" color="white" variant="h4" underline="none" sx={style}>
+      <Link href="#"  variant="h4" underline="none" sx={style}>
         {" "}
         Home
       </Link>
 
-      <Link href="#" color="white" variant="h4" underline="none" sx={style}>
+      <Link href="#"  variant="h4" underline="none" sx={style}>
         About
       </Link>
-      <Link href="#" color="white" variant="h4" underline="none" sx={style}>
+      <Link href="#"  variant="h4" underline="none" sx={style}>
         Projects
       </Link>
-      <Link href="#" color="white" variant="h4" underline="none" sx={style}>
+      <Link href="#"  variant="h4" underline="none" sx={style}>
         Education
       </Link>
     </Stack>

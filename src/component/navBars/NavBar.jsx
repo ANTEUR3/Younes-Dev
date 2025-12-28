@@ -20,10 +20,7 @@ const NavBar = ({ setOpenDrawer, isOpenDrawer }) => {
       sx={{
         py: 1,
         height: 72,
-        bgcolor:
-          scrollPosition > 10
-            ? "rgba(134, 216, 152, 0.7)"
-            : "rgba(153, 201, 21, 0.7)",
+        bgcolor: scrollPosition > 10 ? "rgba(0, 0, 0, 0.7)" : "transparent",
         position: "fixed",
         zIndex: (theme) => theme.zIndex.drawer + 1,
         backdropFilter: scrollPosition > 10 && "blur(60px)",
