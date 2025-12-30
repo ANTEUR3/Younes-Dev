@@ -7,11 +7,11 @@ const About = () => {
   const theme = useTheme();
   return (
     <Box
-      sx={{ display: "flex", justifyContent: "start", flexDirection: "column" }}
+      sx={{ display: "flex", justifyContent: "center", flexDirection: "column" }}
     >
       <Box
         sx={{
-          position: "fixed", top: 0, left: 0, right: 0 
+          position: "fixed", top: 0, left: 0, right: 0 ,height: "100vh"
         }}
       >
         <img src={BackgroundImage} style={{ width: "100%", height: "100%" }} />
@@ -22,7 +22,7 @@ const About = () => {
           height: "80vh",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "start",
+          justifyContent: "space-between",
           position: "relative",
           zIndex:1
                 }}

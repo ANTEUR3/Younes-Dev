@@ -6,7 +6,7 @@ const Summury = () => {
     <Typography
       component={"h5"}
       variant={"h6"}
-      sx={{ mt: 14, maxWidth: 1000, typography: "h6", lineHeight: 2, fontWeight: 700,    fontFamily: "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      sx={{ marginTop: '5px', maxWidth: 1000, typography: "h6", lineHeight: 2, fontWeight: 700,    fontFamily: "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
 }}
     >
       Fullstack Frontend-focused Developer with a strong foundation in
