@@ -1,10 +1,12 @@
 import { Box, Container, Stack } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import BackgroundImage from "../../assets/images/SkillsBK.png"
 import Title from '../../component/Title/Title'
 import SkillsButtons from './SkillsButtons'
 import { color } from 'framer-motion'
+import SkillsFilter from './SkillsFilter'
 const Skills = () => {
+  const [selectedSkillsCategory,setSelectedSkillsCategory]=useState('')
   return (
     <Box
       sx={{ display: "flex", justifyContent: "center", flexDirection: "column" }}
@@ -45,7 +47,8 @@ const Skills = () => {
           >
             My Skills
           </Title>
-          <SkillsButtons/>
+          <SkillsFilter setSelectedSkills={setSelectedSkillsCategory} selectedSkills={selectedSkillsCategory} />
+          <SkillsButtons selectedSkills={selectedSkillsCategory} />
 
           
         </Stack>
