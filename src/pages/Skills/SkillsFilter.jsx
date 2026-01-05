@@ -3,7 +3,7 @@ import React from 'react'
 
 const SkillsFilter = ({setSelectedSkills,selectedSkills}) => {
   return (
-    <Container>
+    <Container >
     <Stack direction={'row'} justifyContent={'start'} alignItems={'center'} gap={3} >
       <Button onClick={()=>setSelectedSkills('Backend')} variant={selectedSkills=='Backend'?"contained":'outlined'}  sx={{px:3,py:2}}>
         Backend

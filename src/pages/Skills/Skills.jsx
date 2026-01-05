@@ -6,7 +6,7 @@ import SkillsButtons from './SkillsButtons'
 import { color } from 'framer-motion'
 import SkillsFilter from './SkillsFilter'
 const Skills = () => {
-  const [selectedSkillsCategory,setSelectedSkillsCategory]=useState('')
+  const [selectedSkillsCategory,setSelectedSkillsCategory]=useState('Backend')
   return (
     <Box
       sx={{ display: "flex", justifyContent: "center", flexDirection: "column" }}

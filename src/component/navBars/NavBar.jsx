@@ -10,12 +10,14 @@ import useScrollPosition from "../../hooks/useScrollPosition";
 import Logo from "../../assets/images/logo_.png";
 import { DesktopItems } from "./items.jsx";
 import { MobileMenu } from "./items.jsx";
+import { Outlet } from "react-router-dom";
 const NavBar = ({ setOpenDrawer, isOpenDrawer }) => {
   const scrollPosition = useScrollPosition();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   return (
-    <AppBar
+    <>
+      <AppBar
       elevation={0}
       sx={{
         py: 1,
@@ -51,6 +53,9 @@ const NavBar = ({ setOpenDrawer, isOpenDrawer }) => {
         </Stack>
       </Container>
     </AppBar>
+    <Outlet/>
+    </>
+  
   );
 };
 

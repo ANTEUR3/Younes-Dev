@@ -2,11 +2,10 @@ import React, { useState , useMemo } from "react";
 import NavBar from "../component/navBars/NavBar";
 import { CustomDrawer } from "../component/Drawer/Drawer";
 import { Toolbar } from "@mui/material";
-import About from "../component/About/About";
+import About from "./About/About";
 import useNavBarItemStore from "../store/navBarItemStore";
 import Skills from "./Skills/Skills";
 const Home = () => {
-  const [open, setOpen] = useState(false);
     const {selectedItem , setSelectedItem }=useNavBarItemStore()
   
   const rendredPage=useMemo(()=>{

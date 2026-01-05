@@ -1,28 +1,37 @@
-import { Container, IconButton, Link, Stack, Typography } from "@mui/material";
+import { Container, IconButton, Stack, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 import useNavBarItemStore from "../../store/navBarItemStore";
 import { useMemo } from "react";
-
+import {Link} from 'react-router-dom'
 export const DesktopItems = () => {
-  const style = {
-    fontWeight:760,
-    transition: "color 0.3s ease",
-    "&:hover": {
-      color: "#707572ff", 
-    },
-  };
-  
-  const {selectedItem , setSelectedItem }=useNavBarItemStore()
-  
-  const items=[{id:0,item:'About'},{id:1,item:'Skills'},{id:2,item:'Experiences'},{id:3,item:'Education'},{id:4,item:'Projects'}]
-  const displayItems=useMemo(()=>{
-    return items.map((item)=>(<Link onClick={()=>{console.log(item.id);
-     setSelectedItem(item.id)}} href="#"  variant="h5" underline="none" sx={{...style,color:item.id===selectedItem?'blue.500':'black'}}>
-        {item.item}
-      </Link>))
-  },[items,selectedItem])
+
+  const {setSelectedItem , selectedItem}=useNavBarItemStore()
+
+  const items = [
+    { id: 0, link:'/', item: "About" },
+    { id: 1, link:'/skills', item: "Skills" },
+    { id: 2, link:'/', item: "Experiences" },
+    { id: 3, link:'/', item: "Education" },
+    { id: 4, link:'/Projects', item: "Projects" },
+  ];
+
+  const displayItems = useMemo(() => {
+    return items.map((item) => (
+      <Link
+        onClick={()=>setSelectedItem(item.item)}
+        to={`${item.link}`}
+        variant="h5"
+        underline="none"
+      >
+        <Typography sx={{fontWeight:'bold', fontSize:'26px',color:selectedItem==item.item?'rgba(34, 90, 175, 1)':'black'}}>
+            {item.item}
+        </Typography>
+      </Link>
+    ));
+  }, [items]);
+
   return (
     <Stack
       direction="row"
