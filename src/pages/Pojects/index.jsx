@@ -1,16 +1,17 @@
 import { Box, Container, Stack } from "@mui/material";
 import React from "react";
 import {ProjectsData} from './projectsData'
-import Project from "./Project";
+import Project from "./ProjectSlider";
+import ProjectSlider from "./ProjectSlider";
+import ProjectDetails from "./ProjectDetails";
 const Projects = () => {  
   return (
-    <Container maxWidth={false} disableGutters>
+    <Container sx={{pt:'100px'}}>
       <Box
         sx={{
           display: "grid",
           gridTemplateColumns: {
             xs: "1fr", 
-            lg: "1fr 1fr",
           },
           rowGap: {
             xs: "20px",
@@ -20,9 +21,10 @@ const Projects = () => {
           width: "100%",
         }}
       >
-        {ProjectsData.map((project)=><Project project={project} />)}
-
-
+        {ProjectsData.map((project,index)=><Stack direction={'row'} alignItems={'start'} justifyContent={'start'}>
+            <ProjectSlider images={project?.images} index={index}/>
+            <ProjectDetails project={{...project,images:null}}/>
+        </Stack>)}
       </Box>
     </Container>
   );

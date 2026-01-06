@@ -4,12 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { GrFormNext } from "react-icons/gr";
+import { GrFormPrevious } from "react-icons/gr";
 
 import "swiper/css";
-const Project = ({ project }) => {
+const ProjectSlider = ({ images , index }) => {
   return (
     <Container>
-      <Swiper
+          <Swiper
         effect="coverflow"
         grabCursor
         loop
@@ -22,15 +24,16 @@ const Project = ({ project }) => {
           modifier: 2.5,
         }}
         pagination={{el:'',clickable:true}}
-        navigation={{nextEl:'.nextEl',prevEl:'.prevEl'}}
+        navigation={{nextEl:`.nextEl${index}`,prevEl:`.prevEl${index}`}}
         style={{
           height: "400px",
           position: "relative",
+          width:'550px'
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
-        {project?.images?.map((image) => (
+        {images?.map((image) => (
           <SwiperSlide>
             <img style={{ width: "100%", height: "90%" }} src={image} alt="" />
           </SwiperSlide>
@@ -44,10 +47,10 @@ const Project = ({ project }) => {
           position={"absolute"}
           bottom={1}
           left={3}
-          className="swiper-button-next slider-arrow"
+          className={`swiper-button-next slider-arrow prevEl${index}`}
+          sx={{backgroundColor:'rgba(23, 81, 168, 1)',borderRadius:'100%',padding:1,color:'white',fontSize:'32px'}}
         >
-          <ArrowBackIosNewIcon sx={{cursor:'pointer'}} className="prevEl" />
-          <Typography sx={{fontWeight:'bold'}}>prev</Typography>
+          <GrFormPrevious  />
         </Box>
         <Box
           gap={2}
@@ -58,16 +61,15 @@ const Project = ({ project }) => {
           position={"absolute"}
           bottom={1}
           right={3}
-          className="swiper-button-prev slider-arrow"
+          className={`swiper-button-prev slider-arrow nextEl${index}`}
+          sx={{backgroundColor:'rgba(23, 81, 168, 1)',borderRadius:'100%',padding:1,color:'white',fontSize:'32px'}}
         >
-          <Typography sx={{fontWeight:'bold'}}>next</Typography>
-
-          <ArrowForwardIosIcon sx={{cursor:'pointer'}} className="nextEl" />
+          <GrFormNext    />
         </Box>
         <div className="swiper-pagination"></div>
-      </Swiper>
+      </Swiper>      
     </Container>
   );
 };
 
-export default Project;
+export default ProjectSlider;
