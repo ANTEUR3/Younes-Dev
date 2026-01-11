@@ -7,6 +7,10 @@ import AYCourses1 from '../../assets/images/Projects/AY-Courses/Courses1.png'
 import AYCourses2 from '../../assets/images/Projects/AY-Courses/Courses2.png'
 import AYCourses3 from '../../assets/images/Projects/AY-Courses/Courses3.png'
 
+import game1 from '../../assets/images/Projects/WiinGames/Game1.png'
+import game2 from '../../assets/images/Projects/WiinGames/Game2.png'
+import game3 from '../../assets/images/Projects/WiinGames/Game3.png'
+import game4 from '../../assets/images/Projects/WiinGames/Game4.png'
 
 export const ProjectsData=[
     {
@@ -21,15 +25,19 @@ export const ProjectsData=[
     //     description :'A real-time weather application that provides accurate weather forecasts for major cities worldwide. Features include current conditions, hourly and daily forecasts, weather alerts, and a user-friendly interface for searching and tracking multiple locations.',
     //     images:[],
     // },
-    // {
-    //     name:'Wiin Games',
-    //     description :'An interactive educational gaming platform designed to teach children about waste recycling through engaging games at different difficulty levels. Features include interactive recycling challenges, progress tracking, educational content about environmental sustainability, and rewards system to motivate learning.',
-    //     images:[],
-    // },
+    {
+        name:'Wiin Games',
+        description :'An interactive educational gaming platform designed to teach children about waste recycling through engaging games at different difficulty levels. Features include interactive recycling challenges, progress tracking, educational content about environmental sustainability, and rewards system to motivate learning.',
+        images:[game1,game2,game3,game4],
+        skills:['Javascrit','PHP','Mysql','SQL']
+
+    },
     {
         name:'AY-Courses',
         description: 'A comprehensive online learning platform offering specialized courses in Computer Science fields. Features include interactive course modules, video lectures, coding exercises, progress tracking, student assessments, and certificates of completion. Designed to help learners master programming, data structures, algorithms, web development, and other CS fundamentals with hands-on projects.',
         images:[AYCourses1,AYCourses2,AYCourses3],
+        skills:['React.js','Next.js','Tailwindcss','Node.js']
+
     },
     // {
     //     name:'Real time chat application',

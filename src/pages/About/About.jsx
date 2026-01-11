@@ -3,6 +3,7 @@ import React from "react";
 import BackgroundImage from "../../assets/images/background1.jpg";
 import Title from "../../component/Title/Title";
 import Summury from "./Summury";
+import SocialButtons from "./SocialMedia";
 const About = () => {
   const theme = useTheme();
   return (
@@ -26,7 +27,6 @@ const About = () => {
       </Box>
       <Container
         sx={{
-          height: "80vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -55,6 +55,7 @@ const About = () => {
 
           <Summury />
         </Stack>
+        <SocialButtons />
       </Container>
     </Box>
   );
