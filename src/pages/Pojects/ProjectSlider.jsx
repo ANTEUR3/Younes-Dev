@@ -10,7 +10,7 @@ import { GrFormPrevious } from "react-icons/gr";
 import "swiper/css";
 const ProjectSlider = ({ images , index }) => {
   return (
-    <Stack>
+    <Stack width={{sm:'100%',lg:'650px'}}>
           <Swiper
         effect="coverflow"
         grabCursor
@@ -28,7 +28,7 @@ const ProjectSlider = ({ images , index }) => {
         style={{
           height: "400px",
           position: "relative",
-          width:'650px'
+          width:'100%',
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"

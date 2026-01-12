@@ -23,7 +23,7 @@ const About = () => {
           height: "100vh",
         }}
       >
-        <img src={BackgroundImage} style={{ width: "100%", height: "100%" }} />
+        <img src={BackgroundImage} style={{ width: "100%", height: "100%",opacity:0.7 }} />
       </Box>
       <Container
         sx={{

@@ -24,10 +24,11 @@ const Projects = () => {
       >
         {ProjectsData.map((project, index) => (
           <Stack
-            direction={{ xs: "column", lg: "row" }}
+            direction={{ sm: "column", lg: "row" }}
             alignItems={"start"}
             justifyContent={"center"}
             gap={5}
+            width={'100%'}
           >
             <ProjectSlider  images={project?.images} index={index} />
             <ProjectDetails project={{ ...project, images: null }} />

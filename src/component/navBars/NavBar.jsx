@@ -11,6 +11,7 @@ import Logo from "../../assets/images/logo_.png";
 import { DesktopItems } from "./items.jsx";
 import { MobileMenu } from "./items.jsx";
 import { Outlet } from "react-router-dom";
+import Footer from "../Footer/index.jsx";
 const NavBar = ({ setOpenDrawer, isOpenDrawer }) => {
   const scrollPosition = useScrollPosition();
   const theme = useTheme();
@@ -54,6 +55,7 @@ const NavBar = ({ setOpenDrawer, isOpenDrawer }) => {
       </Container>
     </AppBar>
     <Outlet/>
+    <Footer/>
     </>
   
   );

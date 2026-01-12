@@ -9,14 +9,15 @@ const ProjectDetails = ({ project }) => {
       direction={"column"}
       justifyContent={"start"}
       alignItems={"start"}
+      width={{sm:'100%',lg:'50%'}}
     >
       <Typography
         component="h1"
         variant="h4"
         sx={{
           fontFamily: "'Manrope', sans-serif",
-          fontWeight: 700,
-          color: "#1E40AF", // matches button gradient
+          fontWeight:{xs:300,md:700} ,
+          color: "#1E40AF",
           letterSpacing: "-0.5px",
           lineHeight: 1.2,
         }}
@@ -38,8 +39,8 @@ const ProjectDetails = ({ project }) => {
               fontFamily: "'Manrope', sans-serif",
               fontWeight: 600,
               fontSize: "0.95rem",
-              px: 3,
-              py: 1.2,
+              px: {sx:1,md:3},
+              py: {sx:0.6,md:1.2},
               borderRadius: "12px",
               background: "linear-gradient(135deg, #2563EB, #1E40AF)",
               boxShadow: "0 8px 24px rgba(37, 99, 235, 0.35)",
@@ -60,17 +61,21 @@ const ProjectDetails = ({ project }) => {
         ))}
       </Stack>
       <Typography
-        sx={{
-          fontWeight: "bold",
-          fontSize: "20px",
-
-          lineHeight: 1.6,
-        }}
-        color="rgba(51, 53, 56, 1)"
-        variant="subtitle1"
-      >
-        {project?.description}
-      </Typography>
+  variant="subtitle1"
+  sx={{
+    fontWeight: 500,
+    fontSize: {
+      xs: "0.1rem",
+      sm: "0.95rem",
+      md: "1rem",
+      lg: "1.05rem",
+    },
+    lineHeight: 1.6,
+    color: "rgba(51, 53, 56, 1)",
+  }}
+>
+  {project?.description}
+</Typography>
     <Stack direction={'row'}>
  {project.access?.map((item)=><Access item={item}  />)}
       <IconButton
