@@ -50,7 +50,7 @@ const About = () => {
               fontFamily: "'Helvetica', 'Arial', sans-serif",
             }}
           >
-            Hi , I'm Younes Full Stack Web Developer 🌟
+            Hi ,<span style={{color:'#1E40AF'}} color="blue">I'm Younes</span> Full Stack Web Developer 🌟
           </Title>
 
           <Summury />
