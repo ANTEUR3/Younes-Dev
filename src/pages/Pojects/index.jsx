@@ -3,7 +3,7 @@ import React from "react";
 import { ProjectsData } from "./projectsData";
 import Project from "./ProjectSlider";
 import ProjectSlider from "./ProjectSlider";
-import ProjectDetails from "./ProjectDetails";
+import ProjectDetails from './ProjectDetails'
 const Projects = () => {
   return (
     <Container sx={{ pt: "100px" }}>

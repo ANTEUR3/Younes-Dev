@@ -13,7 +13,6 @@ export const DesktopItems = () => {
     { id: 0, link:'/', item: "About" },
     { id: 1, link:'/skills', item: "Skills" },
     { id: 2, link:'/', item: "Experiences" },
-    { id: 3, link:'/', item: "Education" },
     { id: 4, link:'/Projects', item: "Projects" },
   ];
 

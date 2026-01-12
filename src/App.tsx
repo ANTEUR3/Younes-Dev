@@ -21,7 +21,6 @@ function App() {
           <Route index element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
-
         </Route>
       </Routes>
     </div>

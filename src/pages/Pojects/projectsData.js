@@ -12,13 +12,19 @@ import game2 from '../../assets/images/Projects/WiinGames/Game2.png'
 import game3 from '../../assets/images/Projects/WiinGames/Game3.png'
 import game4 from '../../assets/images/Projects/WiinGames/Game4.png'
 
+import chat1 from '../../assets/images/Projects/ChatApp/Chat1.png'
+import chat2 from '../../assets/images/Projects/ChatApp/Chat2.png'
+
+
+
 export const ProjectsData=[
     {
         name:'AY-Store',
         description :'A full-stack e-commerce platform built with modern web technologies. Features include product catalog, shopping cart, user authentication, order management, and payment integration. Designed with responsive UI and optimized for performance.',
         images:[Ecommerce1,Ecommerce2,Ecommerce3,Ecommerce4],
         features:['Real time chat between users','CRUD Operations'],
-        skills:['React.js','Tailwindcss','Node.js','Express.js','Socket.io']
+        skills:['React.js','Tailwindcss','Node.js','Express.js','Socket.io'],
+        access:[{link:'https://github.com/ANTEUR3/E-commerce.git',icon:'gitHub'}]
     },
     // {
     //     name:'AY-Weather',
@@ -36,12 +42,13 @@ export const ProjectsData=[
         name:'AY-Courses',
         description: 'A comprehensive online learning platform offering specialized courses in Computer Science fields. Features include interactive course modules, video lectures, coding exercises, progress tracking, student assessments, and certificates of completion. Designed to help learners master programming, data structures, algorithms, web development, and other CS fundamentals with hands-on projects.',
         images:[AYCourses1,AYCourses2,AYCourses3],
-        skills:['React.js','Next.js','Tailwindcss','Node.js']
-
+        skills:['React.js','Next.js','Typescript','Tailwindcss','Node.js'],
+        access:[{link:'https://github.com/ANTEUR3/AY-COURSES_.git',icon:'gitHub'}]
     },
-    // {
-    //     name:'Real time chat application',
-    //     description: 'A real-time messaging platform that enables instant communication between users. Features include live message delivery, user online status, message history, typing indicators, and a clean, responsive chat interface. Built with websocket technology for seamless and low-latency conversations.',
-    //     images:[],
-    // }
+    {
+        name:'Real time chat application',
+        description: 'A real-time messaging platform that enables instant communication between users. Features include live message delivery, user online status, message history, typing indicators, and a clean, responsive chat interface. Built with websocket technology for seamless and low-latency conversations.',
+        images:[chat1,chat2],
+        access:[{link:'https://github.com/ANTEUR3/E-commerce/tree/master/client/src/pages/ChatPages.jsx',icon:'gitHub'}]
+    }
 ]
