@@ -19,7 +19,7 @@ export const DesktopItems = () => {
     { id: 0, link:'/', item: "About",icon:<FaUser /> },
     { id: 1, link:'/skills', item: "Skills",icon:<BsStars/> },
     { id: 2, link:'/', item: "Experiences",icon:<LiaBuromobelexperte/> },
-    { id: 4, link:'/Projects', item: "Projects",icon:<GoProject/> },
+    { id: 4, link:'/projects', item: "Projects",icon:<GoProject/> },
   ];
 
   const displayItems = useMemo(() => {
@@ -53,8 +53,6 @@ export const DesktopItems = () => {
           "&:hover": {
             color: "rgba(34, 90, 175, 1)",
           },
-
-          // underline animation
           "&::after": {
             content: '""',
             position: "absolute",
